@@ -5,3 +5,4 @@
 [102961ZA Subarray Sums I](https://codeforces.com/problemset/gymProblem/102961/ZA "102961ZA Subarray Sums I") <br>
 [102961H Maximum Subarray Sum](https://codeforces.com/problemset/gymProblem/102961/H "102961H Maximum Subarray Sum") <br>
 [287B Pipeline](https://codeforces.com/problemset/problem/287/B "287B Pipeline") <br>
+[1793C Dora and Search](https://codeforces.com/problemset/problem/1793/C "1793C Dora and Search") <br>
