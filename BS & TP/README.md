@@ -7,3 +7,4 @@
 [287B Pipeline](https://codeforces.com/problemset/problem/287/B "287B Pipeline") <br>
 [1793C Dora and Search](https://codeforces.com/problemset/problem/1793/C "1793C Dora and Search") <br>
 [279B Books](https://codeforces.com/problemset/problem/279/B "279B Books") <br>
+[1792C Min Max Sort](https://codeforces.com/problemset/problem/1792/C "1792C Min Max Sort") <br>
