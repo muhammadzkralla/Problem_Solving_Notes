@@ -27,3 +27,6 @@ We make two pointers pointing to the beginnig of the array and start going right
 
 [1792C Min Max Sort](https://codeforces.com/problemset/problem/1792/C "1792C Min Max Sort") <br>
 Binary Search a number x that if removed the pair x, n - x + 1 from the array, it is sorted. This number is between n ans (n + 1) / 2, for example, if n = 6, the pairs will be : 1,6 2,5 3,4. <br>
+
+[1980C Sofia and the Lost Operations](https://codeforces.com/contest/1980/problem/C "1980C Sofia and the Lost Operations") <br>
+Generating the C array by calculating the modifications to make and iterate over the d array from the end to the beginning and start plotting the modifications. <br>
