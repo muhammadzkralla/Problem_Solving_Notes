@@ -45,12 +45,11 @@ struct node {
 };
 
 bool isMultiple(ll x, ll y) {
-    return (y % x == 0);
+    return (y % x == 0 || x % y == 0);
 }
 
 ll divideAndConquer(ll l, ll w) { // NOLINT(misc-no-recursion)
-    if (isMultiple(w, l)) return w;
-    else if (isMultiple(l, w)) return l;
+    if (isMultiple(w, l)) return min(w, l);
 
     ll mn = min(l, w), mx = max(l, w), diff = mx / mn;
     return divideAndConquer(mn, mx - (diff * mn));
