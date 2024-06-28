@@ -1,1 +1,3 @@
-Divide and Conquer.cpp is the solution to the first problem on chapter 4 in Grokking Algorithms book. <br>
+`Divide and Conquer.cpp` is the solution to the first problem on chapter 4 in Grokking Algorithms book. <br>
+
+`Quick Sort.cpp` is the implementation of the quick sort algorithm by the D&C approach using cpp. It's all about making the pivot in the correct index after sorting by the `partition` function, and then call the function recursively for the part after it which is the part containing all the items greater than the pivot, and the part before it which is the part containing all the items less than the pivot. <br>
