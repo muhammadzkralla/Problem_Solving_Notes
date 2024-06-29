@@ -1,0 +1,2 @@
+[1986D Mathematical Problem](https://codeforces.com/contest/1986/problem/D "1986D Mathematical Problem") <br>
+n - 2 operations means that there will be only one pair of digits treated as one number, so we brute force and try each pair of numbers as the constraints are low and minimize the answer. If there's a zero digit, then the answer is zero as we can multiply it by the rest of the digits. All ones are ignored as the best solution for them is to multiply by them, otherwize the best decision is to add the digit. <br>
