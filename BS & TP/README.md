@@ -30,3 +30,6 @@ Binary Search a number x that if removed the pair x, n - x + 1 from the array, i
 
 [1980C Sofia and the Lost Operations](https://codeforces.com/contest/1980/problem/C "1980C Sofia and the Lost Operations") <br>
 Generating the C array by calculating the modifications to make and iterate over the d array from the end to the beginning and start plotting the modifications. <br>
+
+[1978B New Bakery](https://codeforces.com/contest/1978/problem/B "1978B New Bakery") <br>
+Binary search to find the best k to maximize the answer. Notice that k is inversely proportional to the index (i), and the constraints are 1e9, so the loops are replaced with mathematical expressions. <br>
