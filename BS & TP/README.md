@@ -33,3 +33,6 @@ Generating the C array by calculating the modifications to make and iterate over
 
 [1978B New Bakery](https://codeforces.com/contest/1978/problem/B "1978B New Bakery") <br>
 Binary search to find the best k to maximize the answer. Notice that k is inversely proportional to the index (i), and the constraints are 1e9, so the loops are replaced with mathematical expressions. <br>
+
+[209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/description/ "209. Minimum Size Subarray Sum") <br>
+Minimum answer is the length 1, and the maximum answer is the length n (the whole array). Since we know the range of the answer, and it is a sorted range (1 -> n), we can do binary search to find the minumum answer that satisfies the condition (sum <= target). We used a prefix sum array to calculate the sum in O(1) inside the loop that acts like a sliding window.<br>
