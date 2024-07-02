@@ -44,72 +44,82 @@ struct node {
     }
 };
 
-typedef pair<ll, ll> pii;
+typedef pair<ll, string> pii;
 
-vector<vector<pair<ll, ll>>> adj(6);
-vector<ll> cost(6, LLONG_MAX);
-vector<ll> parent(6, -1);
+unordered_map<string, vector<pair<string, ll>>> adj;
+unordered_map<string, ll> cost;
+unordered_map<string, string> parent;
 
-void dijkstra(ll src) {
-    priority_queue<pii, vector<pii>, greater<>> pq;
+void dijkstra(const string& src) {
+
+    // set all costs to infinity as a start
+    for (const auto& node : adj) {
+        cost[node.first] = LLONG_MAX;
+        for (const auto& neighbor : node.second)
+            cost[neighbor.first] = LLONG_MAX;
+    }
+
+    set<pii> nodes;
     cost[src] = 0;
-    pq.emplace(cost[src], src);
+    nodes.insert({cost[src], src});
 
-    while (!pq.empty()) {
-        ll u = pq.top().second;
-        pq.pop();
+    while (!nodes.empty()) {
+        auto p = *nodes.begin();
 
-        for (auto &edge : adj[u]) {
-            ll v = edge.first;
+        string u = p.second;
+        nodes.erase(nodes.begin());
+
+        for (auto& edge : adj[u]) {
+            string v = edge.first;
             ll weight = edge.second;
 
             if (cost[u] + weight < cost[v]) {
+                nodes.erase({cost[v], v});
                 cost[v] = cost[u] + weight;
-                pq.emplace(cost[v], v);
+                nodes.insert({cost[v], v});
                 parent[v] = u;
             }
         }
     }
 }
 
-void print_shortest_path(ll start, ll target) {
-    string s;
-    ll curr = target;
-    while (true) {
-        if (curr == start) {
-            s += to_string(curr);
-            break;
-        }
-
-        s += to_string(curr) + "->";
+void print_shortest_path(const string& start, const string& target) {
+    string path;
+    string curr = target;
+    while (curr != start) {
+        path = curr + (path.empty() ? "" : "->") + path;
         curr = parent[curr];
     }
-    cout << "Shortest path from " << start << " to: " << target <<  " :" << endl;
-    cout << s << endl;
+    path = start + (path.empty() ? "" : "->") + path;
+    cout << "Shortest path from " << start << " to " << target << ":\n";
+    cout << path << endl;
     cout << "The cost: " << cost[target] << endl;
     cout << "********************" << endl;
 }
 
 void solve() {
-    adj[0].emplace_back(1, 5);
-    adj[0].emplace_back(2, 0);
-    adj[1].emplace_back(3, 15);
-    adj[1].emplace_back(4, 20);
-    adj[2].emplace_back(3, 30);
-    adj[2].emplace_back(4, 35);
-    adj[3].emplace_back(5, 20);
-    adj[4].emplace_back(5, 10);
+    adj["Book"].emplace_back("LP", 5);
+    adj["Book"].emplace_back("Poster", 0);
+    adj["LP"].emplace_back("Bass Guitar", 15);
+    adj["LP"].emplace_back("Drums", 20);
+    adj["Poster"].emplace_back("Bass Guitar", 30);
+    adj["Poster"].emplace_back("Drums", 35);
+    adj["Bass Guitar"].emplace_back("Piano", 20);
+    adj["Drums"].emplace_back("Piano", 10);
 
-    dijkstra(0);
-    for (int i = 1; i < 6; ++i)
-        print_shortest_path(0, i);
+    dijkstra("Book");
+
+    for (const auto& node : adj) 
+        if (node.first != "Book") 
+            print_shortest_path("Book", node.first);
+
 }
 
 int main() {
     fast();
     int t = 1;
 //    cin >> t;
-    while (t--){
+    while (t--) {
         solve();
     }
 }
