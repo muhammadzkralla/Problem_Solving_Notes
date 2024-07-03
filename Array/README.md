@@ -1,0 +1,3 @@
+[31. Next Permutation](https://leetcode.com/problems/next-permutation/description/ "31. Next Permutation") <br>
+Search for the first number that breaks the increasing sequence from right to left. When you find this number, nums[i] for example, you will start moving back to the right to find the farest number that is just above the number that broke the sequence, nums[j] for example, swap nums[i] and nums[j], and reverse the rest of the array starting from i to the end of the array.
+As nums[j] is the farest number that is just greater than nums[i] (the nearest number greater than it in natural numbers), when we swap them and reverse the rest of the array from i to the end, we assure this permutation is just bigger than nums array.<br>
