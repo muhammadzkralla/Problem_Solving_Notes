@@ -1,0 +1,2 @@
+[1979B XOR Sequences](https://codeforces.com/contest/1979/problem/B "1979B XOR Sequences") <br>
+Convert each of x, and y to their binary representation and you will observe that the answer is always 2 to the power of the length of matching bits from x and y starting from the LSB until the first difference occures. <br>
