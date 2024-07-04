@@ -50,6 +50,36 @@ unordered_map<string, vector<pair<string, ll>>> adj;
 unordered_map<string, ll> cost;
 unordered_map<string, string> parent;
 
+void dijkstra_pq(const string& src) {
+
+    // set all costs to infinity as a start
+    for (const auto& node : adj) {
+        cost[node.first] = LLONG_MAX;
+        for (const auto& neighbor : node.second)
+            cost[neighbor.first] = LLONG_MAX;
+    }
+
+    priority_queue<pii, vector<pii>, greater<>> pq;
+    cost[src] = 0;
+    pq.emplace(cost[src], src);
+
+    while (!pq.empty()) {
+        string u = pq.top().second;
+        pq.pop();
+
+        for (auto& edge : adj[u]) {
+            string v = edge.first;
+            ll weight = edge.second;
+
+            if (cost[u] + weight < cost[v]) {
+                cost[v] = cost[u] + weight;
+                pq.emplace(cost[v], v);
+                parent[v] = u;
+            }
+        }
+    }
+}
+
 void dijkstra(const string& src) {
 
     // set all costs to infinity as a start
