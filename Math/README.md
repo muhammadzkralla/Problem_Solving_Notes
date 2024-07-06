@@ -1,2 +1,5 @@
 [2582. Pass the Pillow](https://leetcode.com/problems/pass-the-pillow/description/ "2582. Pass the Pillow") <br>
 The time required for each round to be done is n - 1 so, we can calculate the total number of rounds, that will be equal to `number of rounds = time / (n - 1)`, this gives us the number of completed rounds either from 1 -> n or from n -> 1, however, we might complete moving after a round is done, either from left to the right or vice versa so, we calculate the remaining moves after all the rounds are done which will be equal to `remaining moves = time % (n - 1)`. If the number of rounds is even, then we moved from 1 -> n and then moved from n -> 1 and stopped, meaning that the remaining moves will be from 1 towards n. If the number of rounds is odd, then we moved from 1 -> n and stopped, meaning that the remaining moves will be from n towards 1.<br>
+
+[7. Reverse Integer](https://leetcode.com/problems/reverse-integer/description/ "7. Reverse Integer") <br>
+Initialize a variable `ans` with 0, keep shifting it one unit to the left each time, add the right-most digit in `x`, divide `x` by 10 to remove the right-most digit.<br>
