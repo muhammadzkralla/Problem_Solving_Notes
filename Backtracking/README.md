@@ -29,11 +29,13 @@ BACKTRACK (remove choice)
 Return
 ```
 
-<br>
-
-[Backtracking GFG](https://www.geeksforgeeks.org/introduction-to-backtracking-2/ "Backtracking GFG) <br>
+[Backtracking GFG](https://www.geeksforgeeks.org/introduction-to-backtracking-2/ "Backtracking GFG") <br> <hr>
 
 
 [397. Integer Replacement](https://leetcode.com/problems/integer-replacement/description/ "397. Integer Replacement") <br>
 Standard backtracking, we just try each possible operation each time and minimize the answer. Just put in mind that if the number became even, you should always divide by two and if it was odd, we try both scenarios on each time, increase by one or decrease by one.
+<br>
+
+[77. Combinations](https://leetcode.com/problems/combinations/description/ "77. Combinations") <br>
+We push a number to the array and keep pushing the next numbers until we reach the required size, once this happen, we remove the last number added and complete after it, for example if we have n = 5 and we need combinations of size 3, we will have 1 2 3 -> remove 3 -> 124 -> remove 5 -> 125 -> remove 5 -> remove 2 -> 134 and so on.
 <br>
