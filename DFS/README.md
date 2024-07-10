@@ -1,0 +1,1 @@
+`0-lockboxes.py` is the solution to the second interview question in ALX SWE. We will just run a standard DFS algorithm and if we visited all the nodes, we can unlock all, otherwise we can not. <br>
