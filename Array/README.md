@@ -4,3 +4,6 @@ As nums[j] is the farest number that is just greater than nums[i] (the nearest n
 
 [15. 3Sum](https://leetcode.com/problems/3sum/description/ "15. 3Sum") <br>
 Consider that we are searching for numbers x, y, z such that x + y + z equal to zero. Since the constraints are small, we can brute force to find x, y and do binary search to find the remaining z such that z = - (x + y). One last thing you must notice is that duplicates are not allowed.<br>
+
+[48. Rotate Image](https://leetcode.com/problems/rotate-image/description/ "48. Rotate Image") <br>
+Transpose the matrix by swapping all the numbers on the top of the main diagonal with the corresponding ones under the main diagonal and then replace each column `j` with the column `n - j - 1` or in other words, the first column with the last one, the second column with the one before the last, an so on.<br>
