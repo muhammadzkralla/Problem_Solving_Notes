@@ -11,3 +11,7 @@ We will create two variables to store the minimum number we passed by and the ot
 
 [1992D Test of Love](https://codeforces.com/contest/1992/problem/D "1992D Test of Love") <br>
 We always try to reach the nearest possible log. We keep moving forward and if the current cell is a log, then we can move more `m - 1` cells forward. If it's a water cell and we can not move any cells forward, then we must step on it and count it as we cannot step on water for more than `k` times. If it's not a log or a water cell and w can not move any cells forward, then we can not reach the end without stepping on a crocodile.  <br>
+
+[455. Assign Cookies](https://leetcode.com/problems/assign-cookies/description/ "455. Assign Cookies") <br>
+By sorting both arrays, we can now iterate over the sizes array `s[i]` and calculate the optimal child that should take this cookie from the array `g[j]`. Therefore the minimum item in `s` can only take the minimum item in `g` that satisfies the condition `s[i] >= g[j]`. The answer is the number of the taken cookies (`j`) from the greed array `g`.
+<br>
