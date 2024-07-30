@@ -37,7 +37,7 @@ Standard backtracking, we just try each possible operation each time and minimiz
 <br>
 
 [77. Combinations](https://leetcode.com/problems/combinations/description/ "77. Combinations") <br>
-We push a number to the array and keep pushing the next numbers until we reach the required size, once this happen, we remove the last number added and complete after it, for example if we have n = 5 and we need combinations of size 3, we will have `1 2 3` -> `remove 3` -> `1 2 4` -> `remove 5` -> `1 2 5` -> `remove 5` -> `remove 2` -> `134` and so on. Remember that we start the loop from the element that's just after the last element as order does not matter in combinations, `1 2 3` is the same as `3 2 1`.
+We push a number to the array and keep pushing the next numbers until we reach the required size, once this happen, we remove the last number added and complete after it, for example if we have n = 5 and we need combinations of size 3, we will have `1 2 3` -> `remove 3` -> `1 2 4` -> `remove 4` -> `1 2 5` -> `remove 5` -> `remove 2` -> `1 3 4` and so on. Remember that we start the loop from the element that's just after the last element as order does not matter in combinations, `1 2 3` is the same as `3 2 1`.
 <br>
 
 [46. Permutations](https://leetcode.com/problems/permutations/description/ "46. Permutations") <br>

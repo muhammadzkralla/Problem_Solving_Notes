@@ -3,3 +3,6 @@ The time required for each round to be done is n - 1 so, we can calculate the to
 
 [7. Reverse Integer](https://leetcode.com/problems/reverse-integer/description/ "7. Reverse Integer") <br>
 Initialize a variable `ans` with 0, keep shifting it one unit to the left each time, add the right-most digit in `x`, divide `x` by 10 to remove the right-most digit.<br>
+
+[1996D Fun](https://codeforces.com/contest/1996/problem/D "1996D Fun") <br>
+We can brute force on a as long as it keeps the conditions satisfied, and then brute force again on b, however, we can not do a regular brute force on b as it will get TLE so, we will only try the numbers that makes the term `ab` less than or equal n AND the term `a + b` less than or equal n so, we will try all the numbers from `1 -> n / a`. Now we have a and b, we need to calculate c, well to do so we will take c as a common factor from both conditions to see that for a known value of a and b, c can be less than or equal `(n - (a * b)) / (a + b)` or less than or equal `x - a - b`, we check if the two conditions are valid with each value and if so, add all the numbers of c from 1 unitl this chosen c. <br>
