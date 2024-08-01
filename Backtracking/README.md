@@ -43,3 +43,9 @@ We push a number to the array and keep pushing the next numbers until we reach t
 [46. Permutations](https://leetcode.com/problems/permutations/description/ "46. Permutations") <br>
 If you did not solve the combination question above, solve it first or look at the code. We did just the same like in combinations, but we always start the loop from the first element in the array as order matters in permutations unlike combinations. `1 2 3` is not the same as `3 2 1`.
 <br>
+
+[51. N-Queens](https://leetcode.com/problems/n-queens/ "51. N-Queens") <br>
+For each cell on each row, check if we can place a queen here by going up,down,top,bottom, on each diagonal and check if there's a queen placed on this spot or not, if not, you can place a queen here and continue. Otherwise, you can not. Keep going down in the rows and do this process until you reach the bottom of the board, if so, this is a valid answer, otherwise backtrack.
+<br>
+
+`0-nqueens.py` is the solution to the fifth interview question in ALX SWE. This is the same question as the one above except for the output format. <br>

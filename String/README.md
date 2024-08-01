@@ -9,3 +9,7 @@ This time, we reverse the map, meaning that we store what each integer represent
 [28. Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/description/ "28. Find the Index of the First Occurrence in a String") <br>
 Two pointers approach where we make a pointer `l` and a pointer `r`, keep incrementing the pointer `r` and whenever the distance between the two pointers is equal to the size of the `needle`, we see if the substring between `l` and `r` is equal to the `needle` or not, if not, increment the `l` pointer.
 <br>
+
+[6. Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/description/ "6. Zigzag Conversion") <br>
+We will construct the grid. The whole idea is to make two integer variables, `step` and `curr_idx`. The step variable `step` is specifying whether we are going up or down, each time we reach the top or the bottom of the grid, we reverse the direction of the `step` variable, and the `curr_idx` variable is used to detect such behaviour (reaching the top or the bottom of the grid).
+<br>

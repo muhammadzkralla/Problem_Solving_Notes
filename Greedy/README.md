@@ -15,3 +15,7 @@ We always try to reach the nearest possible log. We keep moving forward and if t
 [455. Assign Cookies](https://leetcode.com/problems/assign-cookies/description/ "455. Assign Cookies") <br>
 By sorting both arrays, we can now iterate over the sizes array `s[i]` and calculate the optimal child that should take this cookie from the array `g[j]`. Therefore the minimum item in `s` can only take the minimum item in `g` that satisfies the condition `s[i] >= g[j]`. The answer is the number of the taken cookies (`j`) from the greed array `g`.
 <br>
+
+[1990B Array Craft](https://codeforces.com/contest/1990/problem/B "1990B Array Craft") <br>
+The mutual range between the both the prefix and the suffix, must be all ones to maximize them so, we set all the numbers between `y` and `x` to one. Then we want to make the range before `y` and the range after `x` to have either a total sum of a negative number or zero to keep the condition satisfied and not incrementing the range after `x` or before `y` so, we will try to make these ranges have an average sum of zero by making a sequence of `1 -1 1 -1 1 -1` and so on so that when you add these ranges the total sum will be zero and not break the conditions.
+<br>
