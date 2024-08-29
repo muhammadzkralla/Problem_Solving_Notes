@@ -15,3 +15,7 @@ We iterate over each character of `text1` using the outer loop and each characte
 [1994C Hungry Games](https://codeforces.com/contest/1994/problem/C "1994C Hungry Games") <br>
 For each index `i`, we will store the number of valid subsegments that starts with `i` in the array `dp[i]`. To find such value for each index, we need to find the minimum index `j` such that the sum on the subsegment `i -> j` is greater than `x`, in such index, the value of `g` will become zero so, when we find such index, then the valid subsegments that starts with `i` are all the subsegments from `i -> j` which is equal to `j - i - 1` plus the number of valid subsegments starting with `j` which is equal to `dp[j]`. Why we add `dp[j]`? Because the value `g` is set to zero at `j` as its value got greater than `x` so, the valid subsegments starting with the index `j` will be also valid if we started from the index `i`.
 <br>
+
+[1927D Find the Different Ones!](https://codeforces.com/contest/1927/problem/D "1927D Find the Different Ones!") <br>
+We will construct an array called `dp` where we will put in each `dp[i]` the nearest different number in the array from the index `i` in the input array, and if there's not, it will be `-1`.
+<br>
