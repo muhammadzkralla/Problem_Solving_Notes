@@ -42,3 +42,6 @@ We need to maximize `a + med`, we would take the input as a vector of pair of in
 
 [2009E Klee's SUPER DUPER LARGE Array!!!](https://codeforces.com/contest/2009/problem/E "2009E Klee's SUPER DUPER LARGE Array!!!") <br>
 It's known that the sum of numbers between an integer `n` and another integer `m` can be calculated by the formula `((m - n + 1) * (n + m)) / 2` so, simply we would binary search on the answer and try to minimize it. The answer is the index `i` such that the sum from `k` until `k + i` minus the sum from `k + i + 1` until `k + n - 1` is minimal. <br>
+
+[2014C Robin Hood in Town](https://codeforces.com/contest/2014/problem/C "2014C Robin Hood in Town") <br>
+We will binary search on the minimum `x` we can add to the average such that `v[n / 2]` is less than half of the average. There's two edge cases where if `n` = 1 or if `n / 2` is equal to `n - 1`. <br>
