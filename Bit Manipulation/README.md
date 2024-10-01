@@ -15,3 +15,11 @@ We know that `x ^ x = 0` and `x ^ 0 = x` so, in order to turn a zero into a one,
 
 [1926D Vlad and Division](https://codeforces.com/contest/1926/problem/D "1926D Vlad and Division") <br> It can be easily observed from the test cases that the minimum number we can reach is exactyl `(n / 2)`. We can proof this by the following, if there's a certain number `n`, it can not be inserted in the same group of any other number except for the number which is the number `n` after converting all its bits (if a bit n[i] is 0, make it 1 and vice versa). So, we will iterate over the array and for each numebr `n` we flip all its bits and see if it occurs in our array or not, if yes, we can put them in one group. We will construct a frequency array saving the number of occurence for each number to decide if a number occurs or not and if yes we will minus the total number of groups by `min(freq[i], freq[comp])` where `i` is the number and `comp` is its flipped version.
  <br>
+
+[1669H Maximal AND](https://codeforces.com/problemset/problem/1669/H "1669H Maximal AND") <br> 
+As we try to maximize the resulting AND of the array, we would try to set the bits that are more close to the `MSB` for each number in the array so, we would search all the bits starting from the `MSB` to the `LSB` and set each unset bit as long as we still have operations left.
+ <br>
+
+[550B Preparing Olympiad](https://codeforces.com/problemset/problem/550/B "550B Preparing Olympiad") <br> 
+Since `n` is too small, we can test all possible cases, which are `2 power n` cases. Treat the existence of a number or not in the current permutation as a bit in the number between `0 to 2 power n`. See the code for more clarity.
+ <br>
