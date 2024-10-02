@@ -23,3 +23,7 @@ As we try to maximize the resulting AND of the array, we would try to set the bi
 [550B Preparing Olympiad](https://codeforces.com/problemset/problem/550/B "550B Preparing Olympiad") <br> 
 Since `n` is too small, we can test all possible cases, which are `2 power n` cases. Treat the existence of a number or not in the current permutation as a bit in the number between `0 to 2 power n`. See the code for more clarity.
  <br>
+
+[1722G Even-Odd XOR](https://codeforces.com/problemset/problem/1722/G "1722G Even-Odd XOR") <br> 
+if `n` is even, then the set of even numbers are going to be `[1, 2, 3, ...]`, and the set of odd numbers are going to be also `[1, 2, 3, ...]`. If `n` is odd, then the set of even numbers are going to be `[1, 2, 3, ...]`, and the set of odd numbers are going to be `[0, 1, 2, 3, ...]`. This satisfies the third condition, now we need to satisfy the second condition. Since even number of ones (or any other number) would cancel each other by XORing them, we would just set the last number of bits in each number in the odd set. If the size of the odd set is even, we would just set all the 30th bits in all its items, if it was odd, we would set the 30th bits in the all the items except for the last one, and set the 29th bits in all the items except for the first one.
+ <br>
