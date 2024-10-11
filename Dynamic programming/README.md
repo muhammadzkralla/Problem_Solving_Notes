@@ -19,3 +19,8 @@ For each index `i`, we will store the number of valid subsegments that starts wi
 [1927D Find the Different Ones!](https://codeforces.com/contest/1927/problem/D "1927D Find the Different Ones!") <br>
 We will construct an array called `dp` where we will put in each `dp[i]` the nearest different number in the array from the index `i` in the input array, and if there's not, it will be `-1`.
 <br>
+
+[1368 Grid Paths](https://cses.fi/problemset/task/1638/ "1638 Grid Paths") <br>
+The same solution as the standard backtracking solution, but as the constraints are high, we would use memoization to optimize it. Another important note is not to pass the grid to the recursive function as it will throw runtime exception.
+<br>
+
