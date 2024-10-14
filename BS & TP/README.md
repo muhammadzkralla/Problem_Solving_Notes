@@ -45,3 +45,6 @@ It's known that the sum of numbers between an integer `n` and another integer `m
 
 [2014C Robin Hood in Town](https://codeforces.com/contest/2014/problem/C "2014C Robin Hood in Town") <br>
 We will binary search on the minimum `x` we can add to the average such that `v[n / 2]` is less than half of the average. There's two edge cases where if `n` = 1 or if `n / 2` is equal to `n - 1`. <br>
+
+[2025C New Game](https://codeforces.com/contest/2025/problem/C "2025C New Game") <br>
+We will do a simple sliding window approach greedily. We sill start with the first item in the array, and start looping through each item in the array. If the `v[i]` is equal to the current item we are processing, just increment the streak. If it was greater than it by one, we would do the same if the numebr of unique items we have is less than `k`. Otherwise, start a new streak.<br>

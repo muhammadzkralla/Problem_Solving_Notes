@@ -12,3 +12,6 @@ For each number flower type `num`, we will try to take as much as we can afford 
 
 [2005D Satyam and Counting](https://codeforces.com/contest/2009/problem/D "2005D Satyam and Counting") <br>
 Any two vertical points can make `n - 2` distinct triangles, and any point `i` that has `y = 1` can make a new distinct triangle with two points `j` and `k` if each of them has `y = 0` and there `x` coordinates are one step before `i` and one step after `i` each. <br>
+
+[2025B Binomial Coefficients, Kind Of](https://codeforces.com/contest/2025/problem/B "2025B Binomial Coefficients, Kind Of") <br>
+When you draw the input-output table, you will observe that the answer is always 2^k. <br>
