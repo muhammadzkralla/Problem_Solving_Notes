@@ -27,3 +27,6 @@ Since `n` is too small, we can test all possible cases, which are `2 power n` ca
 [1722G Even-Odd XOR](https://codeforces.com/problemset/problem/1722/G "1722G Even-Odd XOR") <br> 
 if `n` is even, then the set of even numbers are going to be `[1, 2, 3, ...]`, and the set of odd numbers are going to be also `[1, 2, 3, ...]`. If `n` is odd, then the set of even numbers are going to be `[1, 2, 3, ...]`, and the set of odd numbers are going to be `[0, 1, 2, 3, ...]`. This satisfies the third condition, now we need to satisfy the second condition. Since even number of ones (or any other number) would cancel each other by XORing them, we would just set the last number of bits in each number in the odd set. If the size of the odd set is even, we would just set all the 30th bits in all its items, if it was odd, we would set the 30th bits in the all the items except for the last one, and set the 29th bits in all the items except for the first one.
  <br>
+
+[1553C Penalty](https://codeforces.com/contest/1553/problem/C "1553C Penalty") <br> 
+Each `?` has two options, either 1 or 0, since the maximum number of `?` in the input is `10`, then all the possible options are `2^cnt` where `cnt` is the count of `?` in the input, which is at most `1024` so, we can easily brute force all the possible options for each `?` using the truth table from `0` up to `2^cnt`.<br>

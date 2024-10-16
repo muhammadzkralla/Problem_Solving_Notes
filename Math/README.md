@@ -15,3 +15,7 @@ Any two vertical points can make `n - 2` distinct triangles, and any point `i` t
 
 [2025B Binomial Coefficients, Kind Of](https://codeforces.com/contest/2025/problem/B "2025B Binomial Coefficients, Kind Of") <br>
 When you draw the input-output table, you will observe that the answer is always 2^k. <br>
+
+[1497C1 k-LCM (easy version)](https://codeforces.com/contest/1497/problem/C1 "1497C1 k-LCM (easy version)") <br>
+All the possible formulas to the answer are either (1, `n / 2`, `n / 2`) or (`n / 2`, `n / 2`, `n / 4`) or (`n / 2 - 1`, `n / 2 - 1`, 2). <br>
+
