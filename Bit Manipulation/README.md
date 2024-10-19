@@ -30,3 +30,6 @@ if `n` is even, then the set of even numbers are going to be `[1, 2, 3, ...]`, a
 
 [1553C Penalty](https://codeforces.com/contest/1553/problem/C "1553C Penalty") <br> 
 Each `?` has two options, either 1 or 0, since the maximum number of `?` in the input is `10`, then all the possible options are `2^cnt` where `cnt` is the count of `?` in the input, which is at most `1024` so, we can easily brute force all the possible options for each `?` using the truth table from `0` up to `2^cnt`.<br>
+
+[2030C A TRUE Battle](https://codeforces.com/contest/2030/problem/C "2030C A TRUE Battle") <br> 
+Since, Alice and Bob should alternate between usign the `and` & `or` operators, if there's a set bit on either edges of the string, Alice can put `or` before, or after it and win anyways. He can also win if there's two set bits next to each other in any place in the string. <br>

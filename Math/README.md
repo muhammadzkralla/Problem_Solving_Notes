@@ -19,3 +19,6 @@ When you draw the input-output table, you will observe that the answer is always
 [1497C1 k-LCM (easy version)](https://codeforces.com/contest/1497/problem/C1 "1497C1 k-LCM (easy version)") <br>
 All the possible formulas to the answer are either (1, `n / 2`, `n / 2`) or (`n / 2`, `n / 2`, `n / 4`) or (`n / 2 - 1`, `n / 2 - 1`, 2). <br>
 
+
+[2030B Minimise Oneness](https://codeforces.com/contest/2030/problem/B "2030B Minimise Oneness") <br>
+For any set of conditions zeroes, the `f(t)` is going to be equal to `2^k - 1`, where `k` is the numebr of zeroes, and if we put only one `1` before this group of zeroes, `g(t)` will be equal to `f(t) + 1` so, the absolute value of their differnces will be equal one. <br>
