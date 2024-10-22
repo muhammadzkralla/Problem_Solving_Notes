@@ -15,3 +15,9 @@ As we will sort both strings from l -> r in each query, we will need to change o
 [2001B Generate Permutation](https://codeforces.com/contest/2001/problem/B "2001B Generate Permutation") <br>
 When you try small test cases, you will find that to make the number of carrige returns for both writers to be equal, we need our array to follow this format : 1, n, 2, (n - 1), 3, (n - 2).. and so on. For example, if n = 5, the array would be {1, 5, 2, 4, 3}, then both writers will return 2 times to their starting. So, we will construct the array and see if both will return to the carrige the same number of times or not by calculating the longest continous sequence from both ends, that is {1, 2, 3} from the start for n = 5, and {3, 4, 5} from the end for n = 5, this means that we will not return to the carrige while adding these numbers so, the number of carrige returns equal to n - length of the sequence, if both writes have the same value, this answer is valid.
 <br>
+
+[2024C Concatenation of Arrays](https://codeforces.com/contest/2024/problem/C "2024C Concatenation of Arrays") <br>
+We can look at this problem from the perspective of sorting the pairs ascendingly, one way to achive this is to put 
+the sum of two numbers and sort the array, and store each number in a separate array so that we can still get the value of 
+each number after sorting.
+<br>
