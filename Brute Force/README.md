@@ -9,3 +9,6 @@ A simple brute force but with a trick that we sort the array with keeping track 
 
 [1536B Prinzessin der Verurteilung](https://codeforces.com/problemset/problem/1541/B "1536B Prinzessin der Verurteilung") <br>
 The longest possible length of the answer can not be more than 3 characters. Since the number of substrings with 3 or less characters in an input of length `n` is equal to `n + n - 1 + n - 3` which is `3n - 3`. There's total of `26^1 + 26^2 + 26^3` which is `18278` substrings of length 3 or shorter, so `3n - 3` < `18278` for `n <= 1000`. <br>
+
+[2033B Sakurako and Water](https://codeforces.com/contest/2033/problem/B "2033B Sakurako and Water") <br>
+The idea is pretty easy, we will brute force each diagonal in the matrix and search for the smallest numebr in it, add it to the answer after taking the absolute value of it. The implementation processes both the lower and the upper diagonals at the same time, i.e: checks `a[n - i + j][j]` and `a[j][n - i + j]` at the same time as it's `n x n` matrix.
