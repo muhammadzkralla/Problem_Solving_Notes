@@ -22,3 +22,6 @@ All the possible formulas to the answer are either (1, `n / 2`, `n / 2`) or (`n 
 
 [2030B Minimise Oneness](https://codeforces.com/contest/2030/problem/B "2030B Minimise Oneness") <br>
 For any set of conditions zeroes, the `f(t)` is going to be equal to `2^k - 1`, where `k` is the numebr of zeroes, and if we put only one `1` before this group of zeroes, `g(t)` will be equal to `f(t) + 1` so, the absolute value of their differnces will be equal one. <br>
+
+[2026A Perpendicular Segments](https://codeforces.com/contest/2030/problem/B "2026A Perpendicular Segments") <br>
+If you started from the point `(0, 0)` and went to some point `(a, a)`, there's a perpendicular line from the point `(0, a)` and the point `(a, 0)`. So, we can figure out that `a` is the minimum of `X` and `Y`. <br>
