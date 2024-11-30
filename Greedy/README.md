@@ -28,3 +28,6 @@ consider that we are now at the position `i` in the input array `a` such that `0
 [2033C Sakurako's Field Trip](https://codeforces.com/contest/2033/problem/C "2033C Sakurako's Field Trip") <br>
 We will iterate over each item in the array `a[i]` and also notice the `a[n - i - 1]` item, for each one, we will check if `a[i]` makes a problem with `a[i - 1]` and if `a[n - i - 1]` makes a problem with `a[n - i]`. If both of them create a problem, then we will ckeck if swapping can reduce half of the problem or the whole problem. If only one item creates a problem, then we will check if swapping can remove the problem or not. For each scenario of them, we would swap if it creates a better solution.
 <br>
+
+[abc382C - Kaiten Sushi](https://atcoder.jp/contests/abc382/tasks/abc382_c "abc382C - Kaiten Sushi") <br>
+We will calculate the suitable index for each value of `b` anyways (it can be considered dp). <br>
