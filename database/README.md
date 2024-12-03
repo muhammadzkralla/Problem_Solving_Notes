@@ -1,0 +1,2 @@
+[1934. Confirmation Rate](https://leetcode.com/problems/confirmation-rate/ "1934. Confirmation Rate") <br>
+`t1` CTE represents each `user_id` with their total count of 'confirmed' records. `t2` CTE represents each `user_id` and their total count of occurences in the database. `t3` CTE represents each `user_id` and their `confirmation_rate` but it does not contain all the `user_id`s in the `signup` table, so we need to join it with the `signup` table with left join and use `coalesce` to replace null values with zero.<br>
