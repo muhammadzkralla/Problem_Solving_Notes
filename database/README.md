@@ -9,3 +9,6 @@
 
 [1211. Queries Quality and Percentage](https://leetcode.com/problems/queries-quality-and-percentage/ "1211. Queries Quality and Percentage") <br>
 This is another solution to the problem above as I forgot to use the `avg` function in it. In this solution we can just select each `query_name` and use the `avg` function with both the rating and the position directly instead of making CTEs (`t1`, `t2`) and then use the `sum` function with `case` to get the total sum of all `rating`s less than one and multiply them by one hundred to get the `poor_query_percentage` column. <br>
+
+[1193. Monthly Transactions I](https://leetcode.com/problems/monthly-transactions-i/description/ "1193. Monthly Transactions I") <br>
+To extract only the month and the year in psql, you need to use the `to_char()` function and specify its format, which is `YYYY-MM`. The country column has nothing to do about except for the fact that there exists null countries you have to handle with the `coalesce()` function. The rest are regular `sum()` functions with some `case when` conditions. The most important part here is that in order to correctly parse records in the same month is to group by the month after formatting which is after applying the `to_char()` part on the dates. <br>
