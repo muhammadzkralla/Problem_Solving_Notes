@@ -24,3 +24,6 @@ We will construct an array called `dp` where we will put in each `dp[i]` the nea
 The same solution as the standard backtracking solution, but as the constraints are high, we would use memoization to optimize it. Another important note is not to pass the grid to the recursive function as it will throw runtime exception.
 <br>
 
+[873. Length of Longest Fibonacci Subsequence](https://leetcode.com/problems/length-of-longest-fibonacci-subsequence/description/ "873. Length of Longest Fibonacci Subsequence") <br>
+Iterate over each item `i` in the given array `arr`, and for each item `j` in the array from the start until `i`, they can form a fib subsequence of `arr[j], arr[i]`. Then we calculate the number `prev` which can be inserted before `arr[i]` in the constructed subsequence (i.e: `prev, arr[j], arr[i]`), and we test if it exists in our array and its index is less than `j`, then we can add this item to the constructed subsequence and so increase the length by one. `dp[i][j]` represents the greatest length of a fib seq we can construct ending with `arr[i], arr[j]`.
+<br>
