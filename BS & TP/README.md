@@ -48,3 +48,6 @@ We will binary search on the minimum `x` we can add to the average such that `v[
 
 [2025C New Game](https://codeforces.com/contest/2025/problem/C "2025C New Game") <br>
 We will do a simple sliding window approach greedily. We sill start with the first item in the array, and start looping through each item in the array. If the `v[i]` is equal to the current item we are processing, just increment the streak. If it was greater than it by one, we would do the same if the numebr of unique items we have is less than `k`. Otherwise, start a new streak.<br>
+
+[151. Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/description/ "151. Reverse Words in a String") <br>
+Starting from the right to the left, ignoring any trailing spaces, we stop on the first character we meet. Then we start another pointer moving backward until it meets another space, and then append the substring between these two pointers to the answer string. <br>
