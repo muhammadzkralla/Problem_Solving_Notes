@@ -25,3 +25,6 @@ For any set of conditions zeroes, the `f(t)` is going to be equal to `2^k - 1`, 
 
 [2026A Perpendicular Segments](https://codeforces.com/contest/2030/problem/B "2026A Perpendicular Segments") <br>
 If you started from the point `(0, 0)` and went to some point `(a, a)`, there's a perpendicular line from the point `(0, a)` and the point `(a, 0)`. So, we can figure out that `a` is the minimum of `X` and `Y`. <br>
+
+[1780. Check if Number is a Sum of Powers of Three](https://leetcode.com/problems/check-if-number-is-a-sum-of-powers-of-three/description/ "1780. Check if Number is a Sum of Powers of Three") <br>
+Since `n <= 10^7`, then the maximum power of three we can use is `3^15`. Using this information, we can construct an array of powers of three from 0 up to 15 and start forming the given number `n` using this array by subtracting each item from `n` until it reaches zero, indicating success, or a negative number, indicating failure, and returning the result.
