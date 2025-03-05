@@ -28,3 +28,6 @@ If you started from the point `(0, 0)` and went to some point `(a, a)`, there's 
 
 [1780. Check if Number is a Sum of Powers of Three](https://leetcode.com/problems/check-if-number-is-a-sum-of-powers-of-three/description/ "1780. Check if Number is a Sum of Powers of Three") <br>
 Since `n <= 10^7`, then the maximum power of three we can use is `3^15`. Using this information, we can construct an array of powers of three from 0 up to 15 and start forming the given number `n` using this array by subtracting each item from `n` until it reaches zero, indicating success, or a negative number, indicating failure, and returning the result.
+
+[2579. Count Total Number of Colored Cells](https://leetcode.com/problems/count-total-number-of-colored-cells/description/ "2579. Count Total Number of Colored Cells") <br>
+There's a sequence of increasing the multiples of 4 on each iteration, so the answer will always be: `1, 5, 13, 25, ...`. This can be done using the summation formula `n * (n - 1) / 2`. So the answer will be `1 + 4 * n * (n - 1) / 2`.
