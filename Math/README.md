@@ -31,3 +31,8 @@ Since `n <= 10^7`, then the maximum power of three we can use is `3^15`. Using t
 
 [2579. Count Total Number of Colored Cells](https://leetcode.com/problems/count-total-number-of-colored-cells/description/ "2579. Count Total Number of Colored Cells") <br>
 There's a sequence of increasing the multiples of 4 on each iteration, so the answer will always be: `1, 5, 13, 25, ...`. This can be done using the summation formula `n * (n - 1) / 2`. So the answer will be `1 + 4 * n * (n - 1) / 2`.
+
+[2965. Find Missing and Repeated Values](https://leetcode.com/problems/find-missing-and-repeated-values/description/ "2965. Find Missing and Repeated Values") <br>
+Assume that `x` is the repeated number and `y` is the missing number. Using this equation: `sum = perfectSum + x - y`. Let `sumDiff = sum - perfectSum = x - y` (eq1), `sqrDiff = x^2 - y^2 = (x + y) * (x - y)`, then `sqrDiff = (x + y) * sumDiff`, which means that `x + y = sqrDiff / sumDiff` (eq2).
+Solving eq1 and eq2, we can get `x` and `y`.
+
