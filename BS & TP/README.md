@@ -51,3 +51,6 @@ We will do a simple sliding window approach greedily. We sill start with the fir
 
 [151. Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/description/ "151. Reverse Words in a String") <br>
 Starting from the right to the left, ignoring any trailing spaces, we stop on the first character we meet. Then we start another pointer moving backward until it meets another space, and then append the substring between these two pointers to the answer string. <br>
+
+[3208. Alternating Groups II](https://leetcode.com/problems/alternating-groups-ii/description/ "3208. Alternating Groups II") <br>
+Initialize two pointers, `l` at 0 and `r` at 1. If `colors[r] != colors[r - 1]`, this might be a part of a valid group, so increment the `r` pointer and check if the current count (r - l) is greater than or equal the required count `k`, if so, increment the answer by one and increment the `l` pointer. If `colors[r] == colors[r - 1]`, this means that this is not a part of a valid group, so set the pointer `l` to `r` and increment the `r` pointer to process the next items.
