@@ -14,4 +14,7 @@ This is another solution to the problem above as I forgot to use the `avg` funct
 To extract only the month and the year in psql, you need to use the `to_char()` function and specify its format, which is `YYYY-MM`. The country column has nothing to do about except for the fact that there exists null countries you have to handle with the `coalesce()` function. The rest are regular `sum()` functions with some `case when` conditions. The most important part here is that in order to correctly parse records in the same month is to group by the month after formatting which is after applying the `to_char()` part on the dates. <br>
 
 [1789. Primary Department for Each Employee](https://leetcode.com/problems/primary-department-for-each-employee/description/ "1789. Primary Department for Each Employee") <br>
-First we get all the employees and department ids with primary flag set to yes in `t1` CTE. In `t2` CTE, we get all the employees with only one occurence in the table, and then in `t3` CTE, we join them on the `employees` table to get their department id.
+First we get all the employees and department ids with primary flag set to yes in `t1` CTE. In `t2` CTE, we get all the employees with only one occurence in the table, and then in `t3` CTE, we join them on the `employees` table to get their department id. <br>
+
+[180. Consecutive Numbers](https://leetcode.com/problems/consecutive-numbers/description/ "180. Consecutive Numbers") <br>
+Using `lag` and `lead` window functions, we can get the row before and after the current row, then we check if all the three values are equal and add them to the answer. <br>
