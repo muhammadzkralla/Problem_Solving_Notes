@@ -31,3 +31,13 @@ We will iterate over each item in the array `a[i]` and also notice the `a[n - i 
 
 [abc382C - Kaiten Sushi](https://atcoder.jp/contests/abc382/tasks/abc382_c "abc382C - Kaiten Sushi") <br>
 We will calculate the suitable index for each value of `b` anyways (it can be considered dp). <br>
+
+[2818. Apply Operations to Maximize Score](https://leetcode.com/problems/apply-operations-to-maximize-score/description/ "2818. Apply Operations to Maximize Score") <br>
+First, for each number in `nums`, count its distinct prime factors. Use the Sieve of Eratosthenes to precompute primes up to the maximum value in nums and then factor each number to get its prime score. The computed prime score tells you the importance of a number. Higher prime scores mean the number is more valuable for multiplication. Next, for each index `i` in `nums`, determine how many subarrays where `nums[i]` is the dominant element. Use a monotonic stack to compute:
+- `left[i]`: nearest index to the left where the prime score is greater than or equal to `s[i]` (set to -1 if none).
+- `right[i]`: nearest index to the right where the prime score is greater than `s[i]` (set to `n` if none).
+For each index `i`, the number of subarrays where `nums[i]` is dominant is:
+`(i - left[i]) * (right[i] - i)`
+This gives you how many times you could potentially use `nums[i]` in your operations. Sort the elements of nums in descending order along with their indices. This lets you greedily pick the numbers that contribute most to the score. Loop through the sorted numbers. For each number, decide the number of operations to use:
+`ops = min(remaining k, number of subarrays where this number is dominant)`
+Then, reduce `k` by operations. Update your overall score by multiplying it by `nums[i]` raised to the power of `ops`. Since the numbers can be huge, perform the multiplication modulo `10⁹+7`. For fast power calculations, implement binary exponentiation.
