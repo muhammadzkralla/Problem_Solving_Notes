@@ -21,3 +21,6 @@ Using `lag` and `lead` window functions, we can get the row before and after the
 
 [1164. Product Price at a Given Date](https://leetcode.com/problems/product-price-at-a-given-date/ "1164. Product Price at a Given Date") <br>
 `t1` CTE represents rows with dates before `2019-08-16`. `t2` CTE represents rows with the latest date just before `2019-08-16` using `distinct on (product_id)`. `t3` CTE, which is the answer, joins the products table with `t2` CTE to `coalesce` non-existing products in it. <br>
+
+[1204. Last Person to Fit in the Bus](https://leetcode.com/problems/last-person-to-fit-in-the-bus/description/ "1204. Last Person to Fit in the Bus") <br>
+`t1` CTE is just the input ordered by turn. `t2` CTE calculates the cumalative sum over all the rows and put them in a new column called `cum_sum`, this is done using `sum(weight) over (order by turn)` part. Finally, the answer will be the join result of `queue` and `t2` tables where `cum_sum >= 1000` and to get the right answer, we will sort and take only one row (limit 1).
