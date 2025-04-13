@@ -23,4 +23,7 @@ Using `lag` and `lead` window functions, we can get the row before and after the
 `t1` CTE represents rows with dates before `2019-08-16`. `t2` CTE represents rows with the latest date just before `2019-08-16` using `distinct on (product_id)`. `t3` CTE, which is the answer, joins the products table with `t2` CTE to `coalesce` non-existing products in it. <br>
 
 [1204. Last Person to Fit in the Bus](https://leetcode.com/problems/last-person-to-fit-in-the-bus/description/ "1204. Last Person to Fit in the Bus") <br>
-`t1` CTE is just the input ordered by turn. `t2` CTE calculates the cumalative sum over all the rows and put them in a new column called `cum_sum`, this is done using `sum(weight) over (order by turn)` part. Finally, the answer will be the join result of `queue` and `t2` tables where `cum_sum >= 1000` and to get the right answer, we will sort and take only one row (limit 1).
+`t1` CTE is just the input ordered by turn. `t2` CTE calculates the cumalative sum over all the rows and put them in a new column called `cum_sum`, this is done using `sum(weight) over (order by turn)` part. Finally, the answer will be the join result of `queue` and `t2` tables where `cum_sum >= 1000` and to get the right answer, we will sort and take only one row (limit 1). <br>
+
+[1907. Count Salary Categories](https://leetcode.com/problems/count-salary-categories/description/ "1907. Count Salary Categories") <br>
+Each CTE will represent the corresponding salary rank, then we will select their `coutn(*)` with their corresponding rank and union all the results.
