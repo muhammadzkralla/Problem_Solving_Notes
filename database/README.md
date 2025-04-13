@@ -18,3 +18,6 @@ First we get all the employees and department ids with primary flag set to yes i
 
 [180. Consecutive Numbers](https://leetcode.com/problems/consecutive-numbers/description/ "180. Consecutive Numbers") <br>
 Using `lag` and `lead` window functions, we can get the row before and after the current row, then we check if all the three values are equal and add them to the answer. <br>
+
+[1164. Product Price at a Given Date](https://leetcode.com/problems/product-price-at-a-given-date/ "1164. Product Price at a Given Date") <br>
+`t1` CTE represents rows with dates before `2019-08-16`. `t2` CTE represents rows with the latest date just before `2019-08-16` using `distinct on (product_id)`. `t3` CTE, which is the answer, joins the products table with `t2` CTE to `coalesce` non-existing products in it. <br>
